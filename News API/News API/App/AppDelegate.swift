@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  News API
-//
-//  Created by Павел Тимофеев on 18.11.2022.
-//
 
 import UIKit
 import CoreData
