@@ -14,8 +14,16 @@ final class FavoriteViewController: UIViewController {
         super.viewDidLoad()
         view.addSubview(favoriteTableView)
         configureTableView()
+        loadDataFromCoreDataManager()
     }
-    
+    // MARK: - load News from COREDATA Manager
+    private func loadDataFromCoreDataManager(){
+        CoreDataManager.shared.loadNews { results in
+            self.favoriteList = results
+        }
+        self.favoriteTableView.reloadData()
+    }
+    //MARK: - Configure tableView
     private func configureTableView() {
         favoriteTableView.delegate = self
         favoriteTableView.dataSource = self
@@ -35,5 +43,28 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configureCellForFavoriteNews(with: news)
         return cell
     }
-
+    // MARK: - Transihion to url
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailNewsController = DetailNewsController()
+        let urlString = favoriteList[indexPath.row].url
+        detailNewsController.stringForUrl = urlString
+        navigationController?.pushViewController(detailNewsController, animated: true)
+    }
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    //MARK: Delete news in favorite list
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
+                   forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            favoriteList.remove(at: indexPath.row)
+            CoreDataManager.shared.removeNews(at: indexPath.row)
+            displayNotificationAndDismissIn2Second(notificationTitle: "Удаление  данных",
+                              notificationMessage: "Эта новость удалена из раздела избранное")
+            self.favoriteTableView.reloadData()
+            self.favoriteTableView.deselectRow(at: indexPath, animated: true)
+            self.loadDataFromCoreDataManager()
+        }
+        
+    }
 }

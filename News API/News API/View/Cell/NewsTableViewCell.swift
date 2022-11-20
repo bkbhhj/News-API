@@ -67,7 +67,7 @@ final class NewsTableViewCell: UITableViewCell {
         imageTitle.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         imageTitle.topAnchor.constraint(equalTo: topAnchor).isActive = true
         imageTitle.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        imageTitle.heightAnchor.constraint(equalToConstant: Constant.height).isActive = true
+//        imageTitle.heightAnchor.constraint(equalToConstant: Constant.height).isActive = true
         
     }
     // MARK: - Configure constraints for title
