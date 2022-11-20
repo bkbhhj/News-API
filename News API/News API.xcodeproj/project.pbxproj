@@ -28,6 +28,7 @@
 		E9784DAB2927871D0012436C /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9784DAA2927871D0012436C /* FavoriteViewController.swift */; };
 		E9F062F22929F9C4004F1A8E /* NewsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F062F02929F9C4004F1A8E /* NewsEntity+CoreDataClass.swift */; };
 		E9F062F32929F9C4004F1A8E /* NewsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F062F12929F9C4004F1A8E /* NewsEntity+CoreDataProperties.swift */; };
+		E9F062F8292A21E2004F1A8E /* extension UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F062F7292A21E2004F1A8E /* extension UIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		E9784DAA2927871D0012436C /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		E9F062F02929F9C4004F1A8E /* NewsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E9F062F12929F9C4004F1A8E /* NewsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E9F062F7292A21E2004F1A8E /* extension UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "extension UIViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				E9784D9A2926B7850012436C /* Observer.swift */,
 				E9784DA429277FEA0012436C /* Extension + UIView.swift */,
 				E9784DA6292780420012436C /* Assembly.swift */,
+				E9F062F7292A21E2004F1A8E /* extension UIViewController.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F062F8292A21E2004F1A8E /* extension UIViewController.swift in Sources */,
 				E9784D932926B0150012436C /* Constant.swift in Sources */,
 				E9784D9E292771060012436C /* NewsTableViewCell.swift in Sources */,
 				E9784D9B2926B7850012436C /* Observer.swift in Sources */,

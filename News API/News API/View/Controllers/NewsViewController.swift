@@ -135,12 +135,36 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
         detailNewsController.stringForUrl = urlString
         navigationController?.pushViewController(detailNewsController, animated: true)
     }
-    
+    // MARK: - Add news to favorite list
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt
+                   indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let addActionNews = UIContextualAction(style: .normal, title: "Add News") { [weak self]  _,_,
+            completion in
+            guard let newsSaveTitle = self?.viewModel.news.value[indexPath.row].title
+            else {return}
+            guard let newsSaveContent = self?.viewModel.news.value[indexPath.row].content
+            else {return}
+            guard let newsSaveUrl = self?.viewModel.news.value[indexPath.row].url
+            else {return}
+            guard let newsSaveImageUrl = self?.viewModel.news.value[indexPath.row].urlToImage
+            else {return}
+            let saveNews = News(title: newsSaveTitle,
+                                url: newsSaveUrl,
+                                urlToImage: newsSaveImageUrl,
+                                content: newsSaveContent)
+            self?.tableViewNews.reloadRows(at: [indexPath], with: .middle)
+            CoreDataManager.shared.saveNews(News: saveNews)
+            self?.displayNotificationAndDismissIn2Second(notificationTitle: "Cохранение данных",
+                                   notificationMessage: "Эта новость добавлена в раздел избранное")
+            completion(true)
+        }
+        let swipeActions = UISwipeActionsConfiguration(actions: [addActionNews])
+        return swipeActions
+    }
 }
 
 //MARK: - Extension SearchBar
 extension NewsViewController: UISearchBarDelegate {
-    
     //TODO: - Dispatch work item
     //MARK: search functions
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
