@@ -86,9 +86,8 @@
 		E9784D702926AD190012436C /* News API */ = {
 			isa = PBXGroup;
 			children = (
-				E9784D962926B1620012436C /* CoreDataService */,
+				E9F062F5292A1409004F1A8E /* Service */,
 				E9784D912926B0040012436C /* Utility */,
-				E9784D8E2926AF830012436C /* NetworkService */,
 				E9784D882926AE310012436C /* App */,
 				E9784D8B2926AE7C0012436C /* Model */,
 				E9784D8A2926AE3D0012436C /* View */,
@@ -188,6 +187,15 @@
 				E9F062F12929F9C4004F1A8E /* NewsEntity+CoreDataProperties.swift */,
 			);
 			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		E9F062F5292A1409004F1A8E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E9784D8E2926AF830012436C /* NetworkService */,
+				E9784D962926B1620012436C /* CoreDataService */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
