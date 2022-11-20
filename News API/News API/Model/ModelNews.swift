@@ -1,5 +1,4 @@
 import Foundation
-
 //MARK: - Model News
 struct ResponseNews: Decodable {
     let articles: [News]
