@@ -6,7 +6,6 @@ protocol NetworkServiceProtocol: AnyObject {
 }
 //MARK: - NetworkService
 final class NetworkService: NetworkServiceProtocol {
-    let quee = DispatchGroup()
     // MARK: Response News
     func getNews(completion: @escaping (Result<ResponseNews, Error>) -> Void) {
         

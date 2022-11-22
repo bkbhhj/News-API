@@ -174,8 +174,15 @@ extension NewsViewController: UISearchBarDelegate {
             isSearching = false
             viewModel.getTopNews()
         } else {
-            isSearching = true
-            viewModel.searchNews(query: searchText)
+            let networkItem = DispatchWorkItem {
+                print(searchText)
+                self.isSearching = true
+                self.viewModel.searchNews(query: searchText)
+            }
+            DispatchQueue.global().asyncAfter(
+                deadline: .now() + .milliseconds(800),
+                execute: networkItem
+            )
         }
     }
 }
