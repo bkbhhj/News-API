@@ -9,7 +9,7 @@ TopNews app based on MVVM architecture with data bindings that shows news from a
 
  # Photo
 
-<img src="https://github.com/bkbhhj/News-API-MVVM-/blob/main/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202022-11-05%20at%2022.05.14.png" width="200" height="400" />   <img src="https://github.com/bkbhhj/News-API-MVVM-/blob/main/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202022-11-05%20at%2022.06.20.png" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/62264409/203387571-08abd530-24d2-4a3e-8782-1ded78d48033.png" width="200" height="400" />   <img src="https://user-images.githubusercontent.com/62264409/203387093-105fb9c8-9527-418e-860a-3bf62621cb87.png" width="200" height="400" />
 
 
-<img src="https://github.com/bkbhhj/News-API-MVVM-/blob/main/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202022-11-05%20at%2022.08.00.png" width="200" height="400" />   <img src="https://github.com/bkbhhj/News-API-MVVM-/blob/main/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202022-11-05%20at%2022.08.07.png" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/62264409/203387301-a2b315dd-bdc8-4cee-b648-a501566b3e83.png" width="200" height="400" />   <img src="https://user-images.githubusercontent.com/62264409/203387375-f8f90071-0930-42e1-9abf-1081e0c4423a.png" width="200" height="400" />
