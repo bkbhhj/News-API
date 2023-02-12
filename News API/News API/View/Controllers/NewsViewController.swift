@@ -53,7 +53,7 @@ final class NewsViewController: UIViewController,NewsViewControllerProtocol {
     searchController.searchBar.becomeFirstResponder()
   }
   @objc func openFavoriteVC() {
-    let favoritesNewsController = FavoriteViewController(coreData: CoreDataManager())
+    let favoritesNewsController = FavoriteViewController(coreData: CoreDataService())
     navigationController?.pushViewController(favoritesNewsController, animated: true)
   }
   private func setupSearchController() {

@@ -9,16 +9,15 @@ protocol NewsViewModelProtocol: AnyObject {
   var isLoading: Observable<Bool> { get set }
   func searchNews(query: String)
   func saveNews(News: News)
-  
 }
 
 final class NewsViewModel: NewsViewModelProtocol {
     //MARK: - Properties
-  let networkService: NetworkServiceProtocol
-  let coreDataService: CoreDataServiceViewModelProtocol
-  var news: Observable<[News]>
-  var searchText: String
-  var isLoading: Observable<Bool>
+  private let networkService: NetworkServiceProtocol
+  private let coreDataService: CoreDataServiceViewModelProtocol
+   var news: Observable<[News]>
+   var searchText: String
+   var isLoading: Observable<Bool>
     //MARK: - Init
   init(networkService: NetworkServiceProtocol,coreDataService: CoreDataServiceViewModelProtocol, news: Observable<[News]>, searchText: String, isLoading: Observable<Bool>) {
     self.networkService = networkService

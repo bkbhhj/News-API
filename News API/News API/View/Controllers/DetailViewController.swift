@@ -19,7 +19,6 @@ final class DetailNewsController: UIViewController {
     }
   }
 }
-
 extension DetailNewsController {
   private func configureWebView() {
     webView.pin(to: view)

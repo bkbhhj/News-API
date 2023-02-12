@@ -89,11 +89,11 @@
 			isa = PBXGroup;
 			children = (
 				E9F062F5292A1409004F1A8E /* Service */,
-				E9784D912926B0040012436C /* Utility */,
-				E9784D882926AE310012436C /* App */,
 				E9784D8B2926AE7C0012436C /* Model */,
 				E9784D8A2926AE3D0012436C /* View */,
 				E9784D892926AE3B0012436C /* ViewModel */,
+				E9784D882926AE310012436C /* App */,
+				E9784D912926B0040012436C /* Utility */,
 				E9784D822926AD1B0012436C /* Info.plist */,
 			);
 			path = "News API";
@@ -130,9 +130,8 @@
 		E9784D8B2926AE7C0012436C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E9784D7A2926AD190012436C /* News_API.xcdatamodeld */,
-				E9F062F42929F9EE004F1A8E /* CoreDataModel */,
 				E9784D8C2926AEC30012436C /* ModelNews.swift */,
+				E9F062F42929F9EE004F1A8E /* CoreDataModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +185,7 @@
 		E9F062F42929F9EE004F1A8E /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
+				E9784D7A2926AD190012436C /* News_API.xcdatamodeld */,
 				E9F062F02929F9C4004F1A8E /* NewsEntity+CoreDataClass.swift */,
 				E9F062F12929F9C4004F1A8E /* NewsEntity+CoreDataProperties.swift */,
 			);

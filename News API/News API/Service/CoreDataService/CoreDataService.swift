@@ -1,7 +1,6 @@
 import UIKit
 import CoreData
 
-
 protocol CoreDataServiceViewModelProtocol {
   func saveNews(News: News)
 }
@@ -9,10 +8,9 @@ protocol CoreDataServiceProtocol {
   func loadNews(onComplete:@escaping([NewsEntity])-> ())
   func removeNews(at indexPath:Int)
 }
-final class CoreDataManager: CoreDataServiceProtocol,CoreDataServiceViewModelProtocol {
+final class CoreDataService: CoreDataServiceProtocol,CoreDataServiceViewModelProtocol {
     //MARK: - Properties
   var news: [NewsEntity] = []
-  static let shared = CoreDataManager()
     // MARK: - Core Data stack
   lazy var persistentContainer: NSPersistentContainer = {
     let container = NSPersistentContainer(name: Constant.nameloadPersistentStores)
@@ -35,7 +33,7 @@ final class CoreDataManager: CoreDataServiceProtocol,CoreDataServiceViewModelPro
       }
     }
   }
-    //MARK: - Save news function
+    //MARK: - Save news method
   func saveNews(News: News) {
     let saveNews = NewsEntity(context: viewContext)
     saveNews.title = News.title
@@ -48,7 +46,7 @@ final class CoreDataManager: CoreDataServiceProtocol,CoreDataServiceViewModelPro
     }
     saveContext()
   }
-    //MARK: - Load news functions
+    //MARK: - Load news method
   func loadNews(onComplete:@escaping([NewsEntity])-> ()){
     let request: NSFetchRequest<NewsEntity> = NewsEntity.fetchRequest()
     do {
@@ -58,9 +56,8 @@ final class CoreDataManager: CoreDataServiceProtocol,CoreDataServiceViewModelPro
     } catch  {
       print("error fetching data from context")
     }
-    
   }
-    //MARK: - Remove news functions
+    //MARK: - Remove news method
   func removeNews(at indexPath:Int) {
     viewContext.delete(news[indexPath])
     do {

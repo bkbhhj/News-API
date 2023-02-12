@@ -4,7 +4,7 @@ final class Asembly {
   func configureNewsModule() -> UIViewController {
     let news = Observable([News]())
     let networkService = NetworkService()
-    let coreDataService = CoreDataManager()
+    let coreDataService = CoreDataService()
     let viewModel = NewsViewModel(networkService: networkService, coreDataService: coreDataService,
                                   news: news,
                                   searchText: "",
