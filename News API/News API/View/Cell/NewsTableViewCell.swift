@@ -95,7 +95,7 @@ final class NewsTableViewCell: UITableViewCell {
     
   }
     // MARK: Configure Cell
-  func configureCell(with model: News) {
+  func configureCellForNewsViewController(with model: News) {
     if model.urlToImage != nil {
       let url = URL(string: model.urlToImage ?? "")
       imageTitle.sd_setImage(with: url)

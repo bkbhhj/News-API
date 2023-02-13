@@ -124,7 +124,7 @@ extension NewsViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsTableViewCell.identifier, for: indexPath) as? NewsTableViewCell else {return UITableViewCell()}
     let news = viewModel.news.value[indexPath.row]
-    cell.configureCell(with: news)
+    cell.configureCellForNewsViewController(with: news)
     return cell
   }
   
