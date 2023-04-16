@@ -16,7 +16,7 @@ final class NewsViewController: UIViewController,NewsViewControllerProtocol {
     return table
   }()
   
-  private let searchController = UISearchController(searchResultsController: nil)
+  private let searchBar = UISearchController(searchResultsController: nil)
   let spinner: UIActivityIndicatorView = {
     let spinner = UIActivityIndicatorView(style: .large)
     spinner.hidesWhenStopped = true
@@ -49,18 +49,18 @@ final class NewsViewController: UIViewController,NewsViewControllerProtocol {
     navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: Constant.rightBarButtonItemImage), style: .done, target: self, action: #selector(openFavoriteVC))
   }
   @objc func openSearch() {
-    searchController.isActive = true
-    searchController.searchBar.becomeFirstResponder()
+    searchBar.isActive = true
+    searchBar.searchBar.becomeFirstResponder()
   }
   @objc func openFavoriteVC() {
     let favoritesNewsController = FavoriteViewController(coreData: CoreDataService())
     navigationController?.pushViewController(favoritesNewsController, animated: true)
   }
   private func setupSearchController() {
-    searchController.searchBar.delegate = self
-    searchController.obscuresBackgroundDuringPresentation = false
-    searchController.searchBar.placeholder = Constant.searchBarPlaceholder
-    navigationItem.searchController = searchController
+    searchBar.searchBar.delegate = self
+    searchBar.obscuresBackgroundDuringPresentation = false
+    searchBar.searchBar.placeholder = Constant.searchBarPlaceholder
+    navigationItem.searchController = searchBar
   }
     //MARK: - Configure spinner
   private func configureSpinner() {
