@@ -32,7 +32,7 @@ final class NewsViewController: UIViewController,NewsViewControllerProtocol {
   }
   
   required init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
+    fatalError("sdsdsdsd been implemented")
   }
     //MARK: View did load
   override func viewDidLoad() {
